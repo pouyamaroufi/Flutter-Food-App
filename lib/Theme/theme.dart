@@ -1,11 +1,12 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import './color.dart';
 
 ThemeData theme() {
   return ThemeData(
-    fontFamily: 'IS',
+    fontFamily: GoogleFonts.aBeeZee().fontFamily,
     textTheme: textTheme(),
     appBarTheme: appBarTheme(),
     inputDecorationTheme: inputDecorationTheme(),
@@ -25,13 +26,13 @@ ThemeData theme() {
 TextTheme textTheme() {
   return const TextTheme(
     bodyText1: TextStyle(color: titleColor),
-    bodyText2: TextStyle(color: subtitleColor),
+    bodyText2: TextStyle(color: textColor),
     headline1: TextStyle(color: titleColor),
     headline2: TextStyle(color: titleColor),
     headline3: TextStyle(color: titleColor),
     headline4: TextStyle(color: titleColor),
     headline5: TextStyle(color: titleColor),
-    headline6: TextStyle(color: titleColor),
+    headline6: TextStyle(color: subtitleColor),
   );
 }
 
