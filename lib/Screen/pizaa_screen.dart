@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:foodapp/Theme/color.dart';
 import 'package:foodapp/Theme/size_config.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PizzaScreen extends StatelessWidget {
   const PizzaScreen({Key? key}) : super(key: key);
@@ -14,6 +14,11 @@ class PizzaScreen extends StatelessWidget {
       'assets/images/pizza-03.png'
     ];
     return Scaffold(
+      appBar: AppBar(
+          title: Text(
+        'Pizza',
+        style: GoogleFonts.pacifico(fontSize: resW(20)),
+      )),
       body: Column(children: [
         CarouselSlider.builder(
           itemCount: pizaaData.length,
@@ -22,7 +27,7 @@ class PizzaScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 5),
                   child: Image.asset(pizaaData[i])),
           options: CarouselOptions(
-            height: resH(200, context),
+            height: resH(200),
             aspectRatio: 1,
             viewportFraction: 0.6,
             initialPage: 0,

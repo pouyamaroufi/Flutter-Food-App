@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SizeConfig {
   late MediaQueryData _mediaQueryData;
@@ -15,16 +16,16 @@ class SizeConfig {
   }
 }
 
-double resH(double inputHeight, BuildContext context) {
+double resH(double inputHeight) {
   //double screenHeight = MediaQuery.of(context).size.height;
-  double screenHeight = MediaQuery.of(context).size.height;
+  double screenHeight = Get.height;
   // 812 is the layout height that designer use
   return (inputHeight / 812.0) * screenHeight;
 }
 
 // Get the proportionate height as per screen size
-double resW(double inputWidth, BuildContext context) {
-  double screenWidth = MediaQuery.of(context).size.width;
+double resW(double inputWidth) {
+  double screenWidth = Get.width;
   // 375 is the layout width that designer use
   return (inputWidth / 375.0) * screenWidth;
 }

@@ -6,7 +6,7 @@ import './color.dart';
 
 ThemeData theme() {
   return ThemeData(
-    fontFamily: GoogleFonts.aBeeZee().fontFamily,
+    fontFamily: GoogleFonts.pacifico().fontFamily,
     textTheme: textTheme(),
     appBarTheme: appBarTheme(),
     inputDecorationTheme: inputDecorationTheme(),
@@ -37,10 +37,10 @@ TextTheme textTheme() {
 }
 
 AppBarTheme appBarTheme() {
-  return const AppBarTheme(
+  return AppBarTheme(
     color: Colors.transparent,
     elevation: 0,
-    systemOverlayStyle: SystemUiOverlayStyle(
+    systemOverlayStyle: const SystemUiOverlayStyle(
       systemNavigationBarColor: Colors.transparent, // navigation bar color
       statusBarColor: Colors.transparent, // status bar color
       statusBarBrightness: Brightness.dark, //status bar brigtness
@@ -49,10 +49,12 @@ AppBarTheme appBarTheme() {
           Colors.transparent, //Navigation bar divider color
       systemNavigationBarIconBrightness: Brightness.dark,
     ), //navigation bar icon),
-    iconTheme: IconThemeData(color: mainColor),
+    iconTheme: const IconThemeData(color: mainColor),
     centerTitle: true,
-    titleTextStyle:
-        TextStyle(color: titleColor, fontFamily: 'IS_M', fontSize: 18),
+    titleTextStyle: TextStyle(
+        color: titleColor,
+        fontFamily: GoogleFonts.pacifico().fontFamily,
+        fontSize: 18),
   );
 }
 

@@ -30,6 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   animations: ^2.0.0
+  get: ^4.6.1
   avatar_glow: ^2.0.1
   step_progress_indicator: ^1.0.1
   flutter_staggered_animations: ^1.0.0
